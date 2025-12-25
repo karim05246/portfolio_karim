@@ -4,7 +4,7 @@ import { FaInstagram, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="footer glass">
-      © {new Date().getFullYear()} Karim Boraai — Tous droits réservés.
+        Med Karim Elbourai — Tous droits réservés.© {new Date().getFullYear()}
       <div className="social-links" style={{ marginTop: "20px", display: "flex", gap: "15px", fontSize: "1.5rem" }}>
         <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
           <FaInstagram />

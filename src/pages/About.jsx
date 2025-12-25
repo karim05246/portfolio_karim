@@ -15,8 +15,11 @@ export default function About() {
     <section className="page about-page">
       <h2 className="title">À propos de moi</h2>
       <p className="subtitle">
-        Passionné par la technologie et le web, j’aime concevoir des interfaces élégantes et dynamiques.
-        Mon objectif est de créer des expériences utilisateurs uniques et performantes.
+        Passionné par la technologie et le web, je suis développeur Full-Stack.
+        J’aime concevoir des interfaces élégantes et dynamiques, tout en construisant
+        des architectures performantes côté serveur.
+        Mon objectif est de créer des expériences utilisateurs uniques et efficaces.
+
       </p>
 
       <ul className="skills">

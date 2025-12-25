@@ -1,0 +1,163 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  color: #00ff88;
+  font-family: "Courier New", monospace;
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+/* BACKGROUND */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://gemini.google.com/share/1267a4bb11d7");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  opacity: 0.18;
+  transform-style: preserve-3d;
+}
+
+/* CONTENT GRID */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  transform-style: preserve-3d;
+}
+
+/* TEXT SIDE */
+.hero-text {
+  max-width: 720px;
+}
+
+.terminal-line {
+  opacity: 0.7;
+}
+
+.hero-title {
+  font-size: 3.8rem;
+  margin: 20px 0;
+}
+
+.hero-title span {
+  color: #00ffaa;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.hero-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.btn.primary {
+  background: #00ff88;
+  color: #000;
+}
+
+.btn.primary:hover {
+  background: #00ffaa;
+}
+
+.btn.outline {
+  border: 1px solid #00ff88;
+  color: #00ff88;
+}
+
+.btn.outline:hover {
+  background: rgba(0, 255, 136, 0.1);
+}
+
+/* PHOTO SIDE */
+.hero-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+   
+  background: transparent;
+}
+
+.hero-photo img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  transition: transform 0.4s ease;
+}
+
+.hero-photo img:hover {
+  transform: scale(1.04);
+}
+
+/* CURSOR */
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    padding: 0 20px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-photo {
+    margin-top: 3rem;
+  }
+
+  .hero-photo img {
+    width: 260px;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}

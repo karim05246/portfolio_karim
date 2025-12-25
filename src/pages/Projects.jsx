@@ -1,54 +1,75 @@
-import React from "react";
-import cafe from "../image/cafe.jpg"
+ 
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import cafe from "../image/cafe.jpg";
+import ecommerce from "../image/ecommerce.jpg";
+import chatbot from "../image/chatbot.avif";
+import "./Projects.css"
+ 
+
+ 
 
 export default function Projects() {
+  
+
   const projects = [
     {
-      title: "Portfolio React",
-      desc: "Un site personnel avec fond Matrix et transitions fluides.",
-      img: "/images/portfolio.png", // place your image in public/images
-      link: "https://yourportfolio.com"
+      title: "Modern Web Platform",
+      desc: "A cutting-edge web platform built with React and modern design principles.",
+      img: cafe,
+      tags: ["React", "TypeScript", "Tailwind"],
+      github: "#",
+      live: "#",
+    },
+    {
+      title: "Mobile App Design",
+      desc: "Intuitive mobile application with seamless user experience and beautiful UI.",
+      img: chatbot,
+      tags: ["React Native", "UI/UX", "Mobile"],
+      github: "#",
+      live: "#",
     },
     {
       title: "E-commerce UI",
-      desc: "Interface moderne pour une boutique en ligne.",
-      img: "/images/ecommerce.png",
-      link: "https://github.com/yourusername/ecommerce-ui"
+      desc: "Modern interface for an online store.",
+      img: ecommerce,
+      tags: ["React", "UI/UX", "E-commerce"],
+      github: "#",
+      live: "#",
     },
     {
       title: "Chatbot AI",
-      desc: "Assistant conversationnel intelligent pour les cafés.",
-      img: {cafe},
-      link: "https://yourchatbot.com"
-    },
-    {
-      title: "E-commercile",
-      desc: "Assistant conversationnel intelligent pour les cafés.",
-      img: "/images/cafe.jpg",
-      link: "https://yourchatbot.com"
-    },
-     {
-      title: "web sie menu cafe",
-      desc: "Page web pour un menu de cafe shop.",
-      img: "/images/chatbot.png",
-      link: "https://yourchatbot.com"
+      desc: "Smart conversational assistant for café users.",
+      img: chatbot,
+      tags: ["AI", "Chatbot", "React"],
+      github: "#",
+      live: "#",
     },
   ];
 
   return (
-    <section className="page">
-      <h2 className="title">Mes Projets</h2>
+    <section className="projects page">
+      <h2 className="title">Projects</h2>
       <div className="projects-grid">
         {projects.map((p, i) => (
-          <div key={i} className="card glass project-card">
-            <a href={p.link} target="_blank" rel="noopener noreferrer" className="project-link">
+          <div key={i} className="project-card glass">
+            <div className="project-img-wrapper">
               <img src={p.img} alt={p.title} className="project-img" />
               <div className="overlay">
-                <span>Voir le projet</span>
+                <a href={p.github} target="_blank" rel="noopener noreferrer" className="icon">
+                  <FaGithub />
+                </a>
+                <a href={p.live} target="_blank" rel="noopener noreferrer" className="icon">
+                  <FaExternalLinkAlt />
+                </a>
               </div>
-            </a>
+            </div>
             <h3>{p.title}</h3>
             <p>{p.desc}</p>
+            <div className="tags">
+              {p.tags.map((tag, idx) => (
+                <span key={idx} className="tag">{tag}</span>
+              ))}
+            </div>
           </div>
         ))}
       </div>
