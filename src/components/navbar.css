@@ -235,3 +235,13 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: 1200;
 }
+@media (max-width: 768px) {
+  .logo-text {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 0.85rem;
+  }
+}

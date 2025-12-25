@@ -51,28 +51,39 @@ export default function Navbar() {
 
         {/* Nav links */}
         <div className={`nav-links ${mobileMenuOpen ? "active" : ""}`}>
-          <Link to="/" className={location.pathname === "/" ? "active" : ""}>
-            Accueil
-          </Link>
-          <Link
-            to="/about"
-            className={location.pathname === "/about" ? "active" : ""}
-          >
-            À propos
-          </Link>
-          <Link
-            to="/projects"
-            className={location.pathname === "/projects" ? "active" : ""}
-          >
-            Projets
-          </Link>
-          <Link
-            to="/contact"
-            className={location.pathname === "/contact" ? "active" : ""}
-          >
-            Contact
-          </Link>
-        </div>
+  <Link
+    to="/"
+    onClick={() => setMobileMenuOpen(false)}
+    className={location.pathname === "/" ? "active" : ""}
+  >
+    Accueil
+  </Link>
+
+  <Link
+    to="/about"
+    onClick={() => setMobileMenuOpen(false)}
+    className={location.pathname === "/about" ? "active" : ""}
+  >
+    À propos
+  </Link>
+
+  <Link
+    to="/projects"
+    onClick={() => setMobileMenuOpen(false)}
+    className={location.pathname === "/projects" ? "active" : ""}
+  >
+    Projets
+  </Link>
+
+  <Link
+    to="/contact"
+    onClick={() => setMobileMenuOpen(false)}
+    className={location.pathname === "/contact" ? "active" : ""}
+  >
+    Contact
+  </Link>
+</div>
+
       </nav>
 
       {/* Overlay half transparent for mobile menu */}
